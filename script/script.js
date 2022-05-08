@@ -8,7 +8,7 @@ let searchedSubject;
 let resultBox = document.getElementById('resultBox');
 
 let suggestionBox = document.getElementById('suggestionBox');
-let suggestionButtons = document.querySelectorAll('.suggestion');
+let suggestionLinks = document.querySelectorAll('.suggestion');
 
 
 submitButton.addEventListener('click', (e)=>{
@@ -17,11 +17,11 @@ submitButton.addEventListener('click', (e)=>{
         return;
     }
     titleBox.classList.remove('bigversion');
+    if (!suggestionBox.classList.contains('hidden')){
+        suggestionBox.classList.add('hidden');
+    };
 
     searchedSubject = adjustResearch(searchBar.value);
-
-    // hide suggestion box
-    suggestionBox.classList.add('hidden');
 
     // delete previous research results
     resultBox.innerHTML = '';
@@ -58,7 +58,9 @@ function createErrorBox(err){
     resultBox.appendChild(errorBox);
 
     // show suggestion box
-    suggestionBox.classList.remove('hidden');  
+    if (suggestionBox.classList.contains('hidden')){
+        suggestionBox.classList.remove('hidden');
+    };  
 }
 
 
@@ -88,11 +90,17 @@ function createBookBox(book){
     let bookAuthors = document.createElement('ul');
     bookAuthors.innerHTML = '<strong>Author(s):<strong>'
     bookBoxCentralSection.appendChild(bookAuthors);
+    let arr = [];
     book.authors.forEach(retrieveAuthors);
     function retrieveAuthors(bookAuthor){
-        listedAuthor = document.createElement('li');
-        bookAuthors.appendChild(listedAuthor);
-        listedAuthor.innerHTML = bookAuthor.name;
+        if (arr.includes((bookAuthor.name).toLowerCase())){
+            return false; // prevents duplicated authors
+        } else {
+            listedAuthor = document.createElement('li');
+            bookAuthors.appendChild(listedAuthor);
+            listedAuthor.innerHTML = bookAuthor.name;
+            arr.push((bookAuthor.name).toLowerCase());
+        };  
     }
 
     // create more infos button
@@ -104,14 +112,14 @@ function createBookBox(book){
     // retrieve single book information
     async function fetchSingleBook(){
         let singleBookInfos = await fetch(`https://openlibrary.org${book.key}.json`)
-        return singleBookInfos.json()    
+        return singleBookInfos.json()
     }
 
     moreInfosButton.addEventListener('click', ()=>{
         moreInfosButton.classList.toggle('descriptionClosed')
         fetchSingleBook()
         .then(response => toggleDescription(response.description))
-        .catch(error => alert(`An error has occurred: ${(error.message).toLowerCase()}`))    
+        .catch(error => alert(`An error has occurred: ${(error.message).toLowerCase()}`));   
     })
 
     function toggleDescription(description){
@@ -140,7 +148,7 @@ function createBookBox(book){
 }
 
 // suggestion box functioning
-suggestionButtons.forEach(function(btn){
+suggestionLinks.forEach(function(btn){
     btn.addEventListener('click', ()=>{
         searchBar.value = btn.innerHTML;
         searchedSubject = adjustResearch(btn.innerHTML);

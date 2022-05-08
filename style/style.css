@@ -190,12 +190,10 @@ form > button:active{
     margin: auto;
 }
 
-#suggestionBox > button {
-    border: none;
-    text-decoration: underline;
+#suggestionBox > a {
     font-family: 'gelpen', serif;
     font-size: 20px;
-    background-color: transparent;
+    text-decoration: underline;
     color:rgb(69, 30, 3);
     cursor: pointer;
 }
