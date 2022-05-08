@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'schoolbook';
+    src: url('fonts/SchoolBookNew.ttf');
+}
+@font-face {
+    font-family: 'gelpen';
+    src: url('fonts/GelPenUpright.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gelpen';
+    src: url('fonts/GelPenUprightHeavy.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2{
+    font-weight: normal;
+}
+
+body{
+    font-family: 'gelpen', serif;
+    margin: auto;
+    width: 80%;
+    background: linear-gradient(to right, rgb(210, 65, 3), rgb(242, 124, 5));
+    color:rgb(69, 30, 3);
+
+}
+#title{
+    align-items: center;
+    text-align: center;
+    font-family: 'schoolbook', serif;
+    font-weight: normal;
+    padding: 20px;
+    font-size: 25px;
+    background-image: url('images/background-image.jpg');
+    background-size: 17vw;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#title.bigversion{
+    margin: 60px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    border-radius: 15px;
+    background-size: 21vw;
+}
+
+.hidden {
+    display: none;
+}
+
+form{
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+}
+
+form > input {
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    border: solid 2px rgb(69, 30, 3);
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: 'gelpen', serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(69, 30, 3);
+}
+
+form > button {
+    display: block;
+    margin: auto;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'gelpen', serif;
+    box-shadow: 0px 3px 0 0 rgb(69, 30, 3);
+    border-color:rgb(69, 30, 3);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: rgb(69, 30, 3);
+    font-weight: bold;
+    background-color: rgb(243, 203, 7);
+    cursor: pointer;
+}
+form > button:hover {
+    background-color:rgb(242, 124, 5);
+    color: rgb(243, 203, 7);
+}
+
+form > button:active{
+    box-shadow: none;
+}
+
+.errorBox {
+    border: ridge rgb(205, 7, 7) 3px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    background-color: rgb(244, 244, 145);
+}
+
+.bookBox {
+    margin: 20px;
+    padding: 20px;
+    border: ridge rgb(243, 203, 7) 2px;
+    border-radius: 5px;
+    /*background-image: url('background-image.jpg');
+    background-size: 45vw;*/
+    background-color: rgb(244, 244, 145);
+}
+
+.bookTitle {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(to left, rgb(210, 65, 3), rgb(243, 203, 7));
+    border-radius: 5px;
+}
+
+.bookBoxCentralSection {
+    margin: 0px 30px 10px 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.bookBoxCentralSection > img {
+    width: 100px;
+    height: 140px;
+    border: rgb(69, 30, 3) solid 2px;
+    border-radius: 5px;
+}
+
+.bookBoxCentralSection > ul{
+    font-size: 20px;
+    list-style-type: disc;
+    list-style-position: outside;
+    overflow-y: auto;
+    height: 140px;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgba(210, 65, 3, 0.8), rgb(242, 124, 5, 0.8));
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 40%;
+    color: rgb(243, 203, 7);;
+}
+
+.bookBoxCentralSection > ul > li{
+    color: rgb(69, 30, 3);
+}
+
+.bookBox > button {
+    margin: auto;
+    font-family: 'gelpen', serif;
+    font-size: 20px;
+    display: block;
+    border-radius: 15px;
+    width: 300px;
+    background: rgb(243, 203, 7);
+    color:rgb(69, 30, 3);
+    border:rgb(69, 30, 3) 2px solid;
+    cursor: pointer;
+}
+.bookBox > button:hover{
+    color: rgb(210, 65, 3);
+    border-color: rgb(210, 65, 3);
+}
+
+.descriptionBox{
+    margin: 10px;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#suggestionBox{
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+#suggestionBox > button {
+    border: none;
+    text-decoration: underline;
+    font-family: 'gelpen', serif;
+    font-size: 20px;
+    background-color: transparent;
+    color:rgb(69, 30, 3);
+    cursor: pointer;
+}

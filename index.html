@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <script src="script/script.js" defer></script>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel='icon' href="style/images/favicon.ico">
+
+        <title>Look4Books</title>
+    </head>
+    <body>
+        <div id="title" class="bigversion">
+            <h1>Look 4 Books</h1>
+            <h2>By subject</h2>
+        </div>
+        
+        <form>
+            <label for="searchBar">Which subject are you looking for?</label>
+            <input type="text" name="searchBar" id="searchBar">
+            <button id="submitButton">Submit</button>
+        </form>
+        
+        <div id="resultBox"></div>
+        <div id="suggestionBox" class="hidden">Try looking for these subjects: <button class='suggestion'>Love</button>, <button class='suggestion'>Poetry</button>, <button class='suggestion'>Thriller</button>, <button class="suggestion">Horror</button>, <button class="suggestion">Fantasy</button>, <button class="suggestion">Young adults</button>, <button class="suggestion">Kids books</button>, etc.</div>
+    </body>
+</html>
