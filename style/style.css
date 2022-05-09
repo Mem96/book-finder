@@ -63,6 +63,7 @@ form{
     text-align: center;
     font-size: 25px;
     margin: auto;
+    margin-top: 10px;
 }
 
 form > input {
@@ -188,8 +189,7 @@ form > button:active{
 }
 
 .descriptionBox{
-    margin: 10px;
-    margin-top: 20px;
+    margin: 20px 10px 0 10px;
     max-height: 300px;
     overflow-y: auto;
 }
