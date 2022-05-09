@@ -27,9 +27,10 @@ h1, h2{
 body{
     font-family: 'gelpen', serif;
     margin: auto;
-    width: 80%;
     background: linear-gradient(to right, rgb(210, 65, 3), rgb(242, 124, 5));
     color:rgb(69, 30, 3);
+    padding-right: 20px;
+    padding-left: 20px;
 
 }
 #title{
@@ -112,13 +113,14 @@ form > button:active{
 }
 
 .bookBox {
-    margin: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     border: ridge rgb(243, 203, 7) 2px;
     border-radius: 5px;
-    /*background-image: url('background-image.jpg');
-    background-size: 45vw;*/
     background-color: rgb(244, 244, 145);
+    max-width: 800px;
 }
 
 .bookTitle {
@@ -188,6 +190,7 @@ form > button:active{
     font-size: 20px;
     text-align: center;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 #suggestionBox > a {
