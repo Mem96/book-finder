@@ -29,10 +29,8 @@ body{
     margin: auto;
     background: linear-gradient(to right, rgb(210, 65, 3), rgb(242, 124, 5));
     color:rgb(69, 30, 3);
-    padding-right: 20px;
-    padding-left: 20px;
-
 }
+
 #title{
     align-items: center;
     text-align: center;
@@ -47,8 +45,10 @@ body{
 }
 
 #title.bigversion{
-    margin: 60px;
-    margin-bottom: 50px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 35px;
     border-radius: 15px;
     background-size: 21vw;
@@ -112,6 +112,11 @@ form > button:active{
     background-color: rgb(244, 244, 145);
 }
 
+#resultBox{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
 .bookBox {
     margin: auto;
     margin-top: 20px;
@@ -142,6 +147,7 @@ form > button:active{
     height: 140px;
     border: rgb(69, 30, 3) solid 2px;
     border-radius: 5px;
+    margin-right: 5px;
 }
 
 .bookBoxCentralSection > ul{
@@ -149,11 +155,13 @@ form > button:active{
     list-style-type: disc;
     list-style-position: outside;
     overflow-y: auto;
-    height: 140px;
+    height: 146px;
     border-radius: 5px;
     background: linear-gradient(to right, rgba(210, 65, 3, 0.8), rgb(242, 124, 5, 0.8));
     padding-left: 30px;
     padding-right: 30px;
+    margin-left: 5px;
+    margin-bottom: 10px;
     width: 40%;
     color: rgb(243, 203, 7);;
 }
