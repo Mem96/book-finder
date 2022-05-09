@@ -148,10 +148,11 @@ function createBookBox(book){
 }
 
 // suggestion box functioning
-suggestionLinks.forEach(function(btn){
-    btn.addEventListener('click', ()=>{
-        searchBar.value = btn.innerHTML;
-        searchedSubject = adjustResearch(btn.innerHTML);
+suggestionLinks.forEach(function(link){
+    link.addEventListener('click', (e)=>{
+        e.preventDefault()
+        searchBar.value = link.innerHTML;
+        searchedSubject = adjustResearch(link.innerHTML);
         submitButton.dispatchEvent(new Event('click'));
     })
 })
