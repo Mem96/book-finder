@@ -5,7 +5,10 @@ Look4Books is a project I created for my learning journey on [Start2Impact](http
 The purpose is to make it easy to access to multiple book titles on a chosen subject of interest.
 In order to do so, an API was used. The external service used here is [Open Library](https://openlibrary.org/).
 
-**You can try this project on [GitHub Pages]() or [Netfly]().**
+**You can try this project on [GitHub Pages](https://mem96.github.io/book-finder/) or [Netlify](https://mem96-book-finder.netlify.app/).**
+
+Netlify status:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/db3cdd8c-fb04-4b34-8cdb-ba283950c32d/deploy-status)](https://app.netlify.com/sites/mem96-book-finder/deploys)
 
 The aim of this project is to encourage people to read more, even using the vastity of services available on the web.
 
